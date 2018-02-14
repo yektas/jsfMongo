@@ -1,19 +1,14 @@
 package com.trnet.managedBean;
 
-import com.trnet.spring.dao.IUserDao;
 import com.trnet.spring.model.Item;
 import com.trnet.spring.model.User;
 import com.trnet.spring.service.IUserService;
 import com.trnet.spring.utils.Generator;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +37,6 @@ public class InsertView {
     }
 
     public void startInserting(){
-
         List<Item> items = new ArrayList<Item>();
         List<User> userList = new ArrayList<User>();
         Generator gen = new Generator();

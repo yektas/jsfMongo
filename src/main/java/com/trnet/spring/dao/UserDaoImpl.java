@@ -13,14 +13,14 @@ public class UserDaoImpl implements IUserDao {
     @Autowired
     MongoTemplate mongoTemplate;
 
+    String collectionName = "mongoTest";
+
     public void saveUsers(List<User> userList) {
-
-            mongoTemplate.insert(userList, "users");
-
+        mongoTemplate.insert(userList, collectionName);
 
     }
 
     public List<User> retrieveUsers() {
-        return mongoTemplate.findAll(User.class, "users");
+        return mongoTemplate.findAll(User.class, collectionName);
     }
 }
